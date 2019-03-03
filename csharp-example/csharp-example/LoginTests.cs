@@ -27,7 +27,7 @@ namespace csharp_example
             driver.FindElement(By.Name("username")).SendKeys("admin");
             driver.FindElement(By.Name("password")).SendKeys("admin");
             driver.FindElement(By.Name("login")).Click();
-            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("app-")));
+            wait.Until(c => c.FindElement(By.Id("app-")));
         }
 
         [TearDown]
